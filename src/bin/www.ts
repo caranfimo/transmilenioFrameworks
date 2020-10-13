@@ -8,7 +8,7 @@ import debugLib from 'debug';
 import http from 'http';
 import app from '../app';
 
-const debug = debugLib('bdb:server');
+const debug = debugLib('transmilenioframeworks:server');
 let server: http.Server | undefined;
 let port: string | number | false;
 

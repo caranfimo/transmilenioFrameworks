@@ -1,0 +1,69 @@
+{
+  "mappings": {
+    "properties": {
+      "passengers": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "text"
+          },
+          "document_number": {
+            "type": "text"
+          },
+          "document_type": {
+            "type": "text"
+          },
+          "travels": {
+            "type": "nested",
+            "properties": {
+              "travel_date": {
+                "type": "date"
+              },
+              "start_time": {
+                "type": "integer"
+              },
+              "end_time": {
+                "type": "integer"
+              },
+              "routes": {
+                "type": "nested",
+                "properties": {
+                  "service": {
+                    "type": "object",
+                    "properties": {
+                      "name": { "type":  "text" },
+                      "description": { "type":  "text" }
+                    }
+                  },
+                  "origin_station": {
+                    "type": "object",
+                    "properties": {
+                      "name": { "type": "text" },
+                      "type_station": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "destination_station": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "text"
+                      },
+                      "type_station": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "order": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
