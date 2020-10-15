@@ -51,7 +51,7 @@ router.get('/:id', async (req: Request, res: Response) => {
     const id = req.params.id;
     debug("id %j", id);
     DbConfig.getClient()
-        .getSource({
+        .get({
             id: id,
             index: indexName,
             type: default_type,
@@ -59,7 +59,7 @@ router.get('/:id', async (req: Request, res: Response) => {
         })
         .then((response) => {
             debug("response %j", JSON.stringify(response));
-            res.status(200).json(response);
+            res.status(200).json(response._source);
         }).catch((exception) => {
         debug("error create %j", JSON.stringify(exception));
         res.status(exception.status || 500).json(new DefaultResponse(exception.reason

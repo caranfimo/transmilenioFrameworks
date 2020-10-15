@@ -1,0 +1,207 @@
+{
+  "passengers":[
+    {
+      "name":"Andres",
+      "document_number": "3456789",
+      "document_type": "CC",
+      "travels": [
+        {
+          "travel_date": "2020-10-12",
+          "start_time": 8,
+          "end_time": 11,
+          "routes": [
+            {
+              "destination_station":{
+                "name": "portal norte",
+                "type_station": "portal"
+              },
+              "origin_station":{
+                "name": "calle 26",
+                "type_station": "estacion"
+              },
+              "service": {
+                "name": "F14",
+                "description": "americas"
+              },
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Andres",
+      "document_number": "3456789",
+      "document_type": "CC",
+      "travels": [
+        {
+          "travel_date": "2020-10-12",
+          "start_time": 8,
+          "end_time": 11,
+          "routes": [
+            {
+              "destination_station":{
+                "name": "portal norte",
+                "type_station": "portal"
+              },
+              "origin_station":{
+                "name": "calle 26",
+                "type_station": "estacion"
+              },
+              "service": {
+                "name": "F14",
+                "description": "americas"
+              },
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Andres",
+      "document_number": "3456789",
+      "document_type": "CC",
+      "travels": [
+        {
+          "travel_date": "2020-10-12",
+          "start_time": 8,
+          "end_time": 11,
+          "routes": [
+            {
+              "destination_station":{
+                "name": "portal norte",
+                "type_station": "portal"
+              },
+              "origin_station":{
+                "name": "calle 26",
+                "type_station": "estacion"
+              },
+              "service": {
+                "name": "F14",
+                "description": "americas"
+              },
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Andres",
+      "document_number": "3456789",
+      "document_type": "CC",
+      "travels": [
+        {
+          "travel_date": "2020-10-12",
+          "start_time": 8,
+          "end_time": 11,
+          "routes": [
+            {
+              "destination_station":{
+                "name": "portal norte",
+                "type_station": "portal"
+              },
+              "origin_station":{
+                "name": "calle 26",
+                "type_station": "estacion"
+              },
+              "service": {
+                "name": "F14",
+                "description": "americas"
+              },
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Andres",
+      "document_number": "3456789",
+      "document_type": "CC",
+      "travels": [
+        {
+          "travel_date": "2020-10-12",
+          "start_time": 8,
+          "end_time": 11,
+          "routes": [
+            {
+              "destination_station":{
+                "name": "portal norte",
+                "type_station": "portal"
+              },
+              "origin_station":{
+                "name": "calle 26",
+                "type_station": "estacion"
+              },
+              "service": {
+                "name": "F14",
+                "description": "americas"
+              },
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Andres",
+      "document_number": "3456789",
+      "document_type": "CC",
+      "travels": [
+        {
+          "travel_date": "2020-10-12",
+          "start_time": 8,
+          "end_time": 11,
+          "routes": [
+            {
+              "destination_station":{
+                "name": "portal norte",
+                "type_station": "portal"
+              },
+              "origin_station":{
+                "name": "calle 26",
+                "type_station": "estacion"
+              },
+              "service": {
+                "name": "F14",
+                "description": "americas"
+              },
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Andres",
+      "document_number": "3456789",
+      "document_type": "CC",
+      "travels": [
+        {
+          "travel_date": "2020-10-12",
+          "start_time": 8,
+          "end_time": 11,
+          "routes": [
+            {
+              "destination_station":{
+                "name": "portal norte",
+                "type_station": "portal"
+              },
+              "origin_station":{
+                "name": "calle 26",
+                "type_station": "estacion"
+              },
+              "service": {
+                "name": "F14",
+                "description": "americas"
+              },
+              "order": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

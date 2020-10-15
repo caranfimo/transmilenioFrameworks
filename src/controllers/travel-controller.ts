@@ -52,7 +52,7 @@ router.get('/:id', async (req: Request, res: Response) => {
     const id = req.params.id;
     debug("id %j", id);
     DbConfig.getClient()
-        .getSource({
+        .get({
             id: id,
             index: indexName,
             type: default_type,

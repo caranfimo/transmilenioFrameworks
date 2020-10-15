@@ -4,6 +4,7 @@ import {IPassengerModel} from "../model/IPassengerModel";
 import {DbConfig} from "../config/db-config";
 import {DefaultResponse} from "../model/DefaultResponse";
 import {Utils} from "../utils";
+import fetch from "node-fetch";
 
 const debug = debugLib('transmilenioframeworks:TransmilenioPassenger');
 const router = Router();
@@ -13,20 +14,13 @@ const default_type = "_doc";
 
 router.post('/', async (req: Request, res: Response) => {
     const body = req.body as IPassengerModel;
-    DbConfig.getClient().index<IPassengerModel>(
-        {
-            index: indexName,
-            body: body,
-            type: default_type,
-        }).then((response) => {
-        debug("response create %j", JSON.stringify(response));
+    try {
+        const response = await createPassenger(body);
         res.status(200).json(new DefaultResponse("pasajero creado correctamente"));
-    }).catch((exception) => {
-        debug("error create %j", JSON.stringify(exception));
-        res.status(exception.status || 500).json(new DefaultResponse(exception.reason
+    } catch (exception) {
+      res.status(exception.status || 500).json(new DefaultResponse(exception.reason
             || 'ocurrio un error al crear pasajero', 'ERROR'));
-    });
-
+    }
 });
 
 router.get('/', async (req: Request, res: Response) => {
@@ -51,7 +45,7 @@ router.get('/:id', async (req: Request, res: Response) => {
     const id = req.params.id;
     debug("id %j", id);
     DbConfig.getClient()
-        .getSource({
+        .get({
             id: id,
             index: indexName,
             type: default_type,
@@ -112,5 +106,42 @@ router.delete('/:id', async (req: Request, res: Response) => {
             || 'ocurrio un error al eliminar pasajero', 'ERROR'));
     });
 });
+
+router.post('/load-passenger', async (req: Request, res: Response)=> {
+    fetch('http://localhost:3000/passengers')
+        .then(async (respose) =>{
+            const passengers: IPassengerModel[] = await respose.json() as IPassengerModel[];
+            try{
+                passengers.forEach((passenger) => {
+                    createPassenger(passenger);
+                });
+                res.status(200).json({message: `se agregaron ${passengers.length} pasajeros`})
+            }
+            catch (e) {
+                res.status(500).json({message: 'ocurrio un error'})
+            }
+
+        })
+        .catch((reason => {
+            res.status(500).json({message: 'ocurrio un error'})
+        }));
+});
+
+const createPassenger = async (body: IPassengerModel): Promise<any> => {
+
+    DbConfig.getClient().index<IPassengerModel>(
+        {
+            index: indexName,
+            body: body,
+            type: default_type,
+        }).then((response) => {
+        debug("response create %j", JSON.stringify(response));
+        return Promise.resolve(response);
+    }).catch((exception) => {
+        debug("error create %j", JSON.stringify(exception));
+        return Promise.reject(exception);
+    });
+}
+
 
 export default router;
