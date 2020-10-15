@@ -37,6 +37,35 @@
 					"response": []
 				},
 				{
+					"name": "crear desde web service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3500/passenger/load-passenger",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"passenger",
+								"load-passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "crear en cascada",
 					"request": {
 						"method": "POST",
