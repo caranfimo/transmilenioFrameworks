@@ -16,7 +16,7 @@
                 "type_station": "portal"
               },
               "origin_station":{
-                "name": "calle 26",
+                "name": "72",
                 "type_station": "estacion"
               },
               "service": {
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "name":"Andres",
+      "name":"Carlos",
       "document_number": "3456789",
       "document_type": "CC",
       "travels": [
@@ -45,7 +45,7 @@
                 "type_station": "portal"
               },
               "origin_station":{
-                "name": "calle 26",
+                "name": "Toberin",
                 "type_station": "estacion"
               },
               "service": {
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "name":"Andres",
+      "name":"Juan",
       "document_number": "3456789",
       "document_type": "CC",
       "travels": [
@@ -74,7 +74,7 @@
                 "type_station": "portal"
               },
               "origin_station":{
-                "name": "calle 26",
+                "name": "calle 32",
                 "type_station": "estacion"
               },
               "service": {
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "name":"Andres",
+      "name":"Jose",
       "document_number": "3456789",
       "document_type": "CC",
       "travels": [
@@ -103,7 +103,7 @@
                 "type_station": "portal"
               },
               "origin_station":{
-                "name": "calle 26",
+                "name": "Minuto de dios",
                 "type_station": "estacion"
               },
               "service": {
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "name":"Andres",
+      "name":"JuanFer",
       "document_number": "3456789",
       "document_type": "CC",
       "travels": [
@@ -132,7 +132,7 @@
                 "type_station": "portal"
               },
               "origin_station":{
-                "name": "calle 26",
+                "name": "calle 100",
                 "type_station": "estacion"
               },
               "service": {
@@ -146,7 +146,7 @@
       ]
     },
     {
-      "name":"Andres",
+      "name":"Kiara",
       "document_number": "3456789",
       "document_type": "CC",
       "travels": [
@@ -161,7 +161,7 @@
                 "type_station": "portal"
               },
               "origin_station":{
-                "name": "calle 26",
+                "name": "calle 106",
                 "type_station": "estacion"
               },
               "service": {
@@ -175,7 +175,7 @@
       ]
     },
     {
-      "name":"Andres",
+      "name":"Edgar",
       "document_number": "3456789",
       "document_type": "CC",
       "travels": [

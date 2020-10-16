@@ -107,7 +107,7 @@ router.delete('/:id', async (req: Request, res: Response) => {
     });
 });
 
-router.post('/load-passenger', async (req: Request, res: Response)=> {
+router.post('/load-passengers-all', async (req: Request, res: Response)=> {
     fetch('http://localhost:3000/passengers')
         .then(async (respose) =>{
             const passengers: IPassengerModel[] = await respose.json() as IPassengerModel[];
@@ -116,6 +116,25 @@ router.post('/load-passenger', async (req: Request, res: Response)=> {
                     createPassenger(passenger);
                 });
                 res.status(200).json({message: `se agregaron ${passengers.length} pasajeros`})
+            }
+            catch (e) {
+                res.status(500).json({message: 'ocurrio un error'})
+            }
+
+        })
+        .catch((reason => {
+            res.status(500).json({message: 'ocurrio un error'})
+        }));
+});
+
+router.post('/load-passenger', async (req: Request, res: Response)=> {
+    fetch('http://localhost:3000/passengers')
+        .then(async (respose) =>{
+            const passengers: IPassengerModel[] = await respose.json() as IPassengerModel[];
+            try{
+                const aleatorio = Math.floor(Math.random() * Math.floor(passengers.length-1));
+                createPassenger(passengers[aleatorio]);
+                res.status(200).json({message: `se agregó el pasajero ${passengers[aleatorio].name}`})
             }
             catch (e) {
                 res.status(500).json({message: 'ocurrio un error'})

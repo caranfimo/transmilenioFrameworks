@@ -5,7 +5,7 @@
   "scripts": {
     "install": "npm install -g json-server",
     "build": "tsc",
-    "start": "npm run build & set DEBUG=transmilenioframeworks:* & node ./build/bin/www.js",
+    "start": "npm run build & set DEBUG=transmilenioframeworks:* & npm run start:fake-service & node ./build/bin/www.js",
     "start:fake-service": "json-server --watch ./fake-service/transmilenio-fake.json"
   },
   "dependencies": {
